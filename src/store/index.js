@@ -4,7 +4,7 @@
  * @Autor: Observer
  * @Date: 2021-04-27 11:13:35
  * @LastEditors: Observer
- * @LastEditTime: 2021-04-27 15:06:46
+ * @LastEditTime: 2021-04-27 15:34:44
  */
 import Vue from 'vue'
 import Vuex from 'vuex'
@@ -51,5 +51,9 @@ export default new Vuex.Store({
       }, 1000)
     }
   },
-  modules: {}
+  getters: {
+    showCount(state) {
+      return '当前最新的数量是【' + state.count + '】'
+    }
+  }
 })

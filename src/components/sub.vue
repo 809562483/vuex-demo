@@ -4,7 +4,7 @@
  * @Autor: Observer
  * @Date: 2021-04-27 11:21:25
  * @LastEditors: Observer
- * @LastEditTime: 2021-04-27 15:05:53
+ * @LastEditTime: 2021-04-27 15:36:02
 -->
 <template>
   <div>
@@ -15,6 +15,7 @@
     <button @click="subNByMu">-N by mutations</button>
     <button @click="asyncSubByMu">-1 by actions</button>
     <button @click="asyncSubNByMu">-N by actions</button>
+    <h2>{{ $store.getters.showCount }}</h2>
   </div>
 </template>
 <script>

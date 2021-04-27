@@ -4,7 +4,7 @@
  * @Autor: Observer
  * @Date: 2021-04-27 11:21:25
  * @LastEditors: Observer
- * @LastEditTime: 2021-04-27 15:05:07
+ * @LastEditTime: 2021-04-27 15:37:56
 -->
 <template>
   <div>
@@ -15,10 +15,11 @@
     <button @click="addN(3)">+N by mutations</button>
     <button @click="asyncAdd">+1 by actions</button>
     <button @click="asyncNAdd(4)">+N by actions</button>
+    <h2>{{ showCount }}</h2>
   </div>
 </template>
 <script>
-import { mapMutations, mapState, mapActions } from 'vuex'
+import { mapMutations, mapState, mapActions, mapGetters } from 'vuex'
 export default {
   data() {
     return {}
@@ -31,7 +32,8 @@ export default {
     ...mapActions(['asyncAdd', 'asyncNAdd'])
   },
   computed: {
-    ...mapState(['count'])
+    ...mapState(['count']),
+    ...mapGetters(['showCount'])
   }
 }
 </script>
